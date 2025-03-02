@@ -1,16 +1,69 @@
-# 🐧 Pinguim Academy
+# Arrays
 
-This repository contains all the codes and exercises I am developing during my PHP learning journey at Pinguim Academy.
+No PHP, um array é um mapa ordenado, sempre utilizando chave e valor.
+Pode ser tratado como
+* array
+* list (vetor)
+* hash table (tabela hash)
+* dicionário
+* coleção
+* pilha
+* fila
 
-## 🚀 What will you find here?
+## Declarando Arrays
+Os arrays podem ser declarados da seguinte forma
+```php
+$frutas = array('maçã', 'banana', 'laranja');
+```
 
-- ✅ Solved exercises
-- ✅ Practical projects
-- ✅ PHP code examples
+ou
 
-## 🛠️ Technologies Used
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+```
 
-- [PHP](https://www.php.net/)
----
+## Acessando Elementos
+Os elementos podem ser acessados através da chave, utilizando colchetes
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+echo $frutas[0]; // maçã
+```
 
-Made with ❤️ by Guilherme 😊
+## Adicionando Elementos
+Podemos adicionar elementos ao array da seguinte forma
+```php
+$frutas   = ['maçã', 'banana', 'laranja'];
+$frutas[] = 'abacaxi';
+```
+
+## Algumas funções úteis
+
+Realizar a contagem de elementos
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+echo count($frutas); // 3
+```
+
+Adicionar elementos no início do array
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+array_unshift($frutas, 'abacaxi');
+```
+
+Remover elementos no início do array
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+array_shift($frutas);
+```
+
+Adicionar elementos no final do array
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+array_push($frutas, 'abacaxi');
+```
+
+Remover elementos no final do array
+```php
+$frutas = ['maçã', 'banana', 'laranja'];
+array_pop($frutas);
+```
