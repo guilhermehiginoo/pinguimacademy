@@ -1,17 +1,30 @@
-# Herança
+# Polimofismo
 
-Na programação orientada a objetos, a herança é um mecanismo que permite que uma classe herde atributos e métodos de outra classe. A classe que herda é chamada de classe filha ou subclasse, e a classe que é herdada é chamada de classe pai ou superclasse.
+Polimorfismo em orientação a objetos é o princípio que permite que classes derivadas de
+uma mesma superclasse tenham métodos iguais(com mesma nomenclatura e parâmetros),
+mas comportamentos diferentes, redefinidos em cada uma das classes-filha.
 
-A herança é uma forma de reutilização de código, pois permite que você crie uma nova classe a partir de uma classe existente. A nova classe herda todos os atributos e métodos da classe existente e pode adicionar novos atributos e métodos ou modificar os existentes.
+<sub><sup>
+Ribeiro, David Barbosa et al. __Programando com orientação a objetos__. 2012.
+Disponível em <https://ned.unifenas.br/cursosgratuitos/2012/poo/polimorfismo.html#:~:text=Polimorfismo%20em%20orienta%C3%A7%C3%A3o%20a%20objetos,cada%20uma%20das%20classes%2Dfilha.>
+</sup></sub>
 
 ```php
-class Animal {}
+class Animal {
+    public function falar() {
+        return "Som";
+    }
+}
 
-class Cachorro extends Animal {}
+class Cachorro extends Animal {
+    public function falar() {
+        return "Latido";
+    }
+}
+
+class Gato extends Animal {
+    public function falar() {
+        return "Miado";
+    }
+}
 ```
-
-## Visibilidade dos atributos / métodos
-Como mostrado na última aula, os objetos podem ser
-* __Públicos__: acessíveis de qualquer lugar
-* __Protegidos__: acessíveis apenas dentro da classe e subclasses
-* __Privados__: acessíveis apenas dentro da classe
