@@ -1,16 +1,75 @@
-# 🐧 Pinguim Academy
+# Classes (Orientação a Objetos)
 
-This repository contains all the codes and exercises I am developing during my PHP learning journey at Pinguim Academy.
+Classes podem ser consideradas a representação de objetos reais. Elas são a base da programação orientada a objetos.
+Uma classe é uma estrutura que abstrai um conjunto de objetos com características similares.
+Tais características são representadas por atributos e métodos.
 
-## 🚀 What will you find here?
+Uma classe define um tipo de objeto, mas não é um objeto em si. Para criar um objeto, é necessário instanciar uma classe.
 
-- ✅ Solved exercises
-- ✅ Practical projects
-- ✅ PHP code examples
+## Pilares da orientação a objetos
+O desenvolvimento orientado a objetos é baseado em três pilares:
+- Encapsulamento
+- Herança
+- Polimorfismo
 
-## 🛠️ Technologies Used
+### Encapsulamento
+O encapsulamento é a técnica que faz com que os detalhes internos de um objeto permaneçam ocultos para o mundo exterior.
+Isso é feito através da definição de métodos e atributos privados.
 
-- [PHP](https://www.php.net/)
----
+## Herança
+A herança é um mecanismo que permite a criação de uma nova classe a partir de uma classe já existente.
 
-Made with ❤️ by Guilherme 😊
+## Polimorfismo
+O polimorfismo é a capacidade que um objeto tem de se comportar de diferentes formas.
+
+## Exemplo de uma classe
+
+Classes são declaradas utilizando a palavra reservada `class`.
+
+```php
+class Animal
+{
+    // Constantes
+    
+    // Attributes
+    
+    // Métodos
+}
+```
+
+## Instanciando uma classe
+
+Classes podem ser instanciadas utilizando a palavra reservada `new`.
+
+```php
+$gato = new Animal();
+```
+
+## Atributos
+
+Atributos são as características de um objeto. Eles são representados por variáveis dentro da classe.
+
+```php
+class Animal
+{
+    protected string $nome;
+
+    protected string $especie;
+    
+    public function __construct(string $nome, string $especie)
+    {
+        $this->nome    = $nome;
+        $this->especie = $especie;
+    }
+}
+
+// ou
+
+class Animal
+{
+    public function __construct(
+        protected string $nome,
+        protected string $especie
+    ) {}
+}
+```
