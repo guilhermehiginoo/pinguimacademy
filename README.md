@@ -12,5 +12,3 @@ This repository contains all the codes and exercises I am developing during my P
 
 - [PHP](https://www.php.net/)
 ---
-
-Made with ❤️ by Guilherme 😊
